@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{$title}</title>
+</head>
+<body>
+<h2 align="center">信息中心</h2>
+<div align="center">
+    <table>
+        <tr>
+            <td>帐号</td><td>{$data.user}</td><td></td>
+        </tr>
+        <tr>
+            <td>姓名</td><td>{$data.name|default="保密"}</td><td>性别</td><td>{$data.sex}</td>
+        </tr>
+        <tr>
+            <td>生日</td><td>{$data.bth|default="未知"}</td><td>职业</td><td>{$data.zhy|default="未知"}</td>
+        </tr>
+        <tr>
+            <td>邮箱</td><td>{$data.mail|default="保密"}</td><td>电话</td><td>{$data.tel|default="保密"}</td>
+        </tr>
+        <tr>
+            <td>住址</td><td>{$data.zhz|default="保密"}</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/css/bootstrap.min.css">
+    <style type="text/css">
+        <!--
+        #bdy{
+            float: none;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .inf{
+            height: 45px;
+            background: blanchedalmond;
+            border: solid deepskyblue 2px;
+            position: relative;
+        }
+        .yij{
+            position: absolute;
+            bottom: 4px;
+            right: 10px;
+        }
+        .totj{
+            background: blanchedalmond;
+            padding-top: 3px;
+        }
+        -->
+    </style>
+</head>
+<body>
+<div id="bdy" class="col-xs-12 col-md-9">
+    <h3 align="center">{$test}</h3>
+    <foreach name="inf" item="vo">
+        <div class="inf">
+            <span>
+                {$vo.ztj}:请求添加您为好友，您是否同意：<br>
+                验证消息:{$vo.yz}
+            </span>
+            <span class="yij"><input type="radio" name="xox" class="xox" value="{$vo.id}"><button data-toggle="collapse" data-target=".totj">同意</button>&nbsp; &nbsp;<button onclick="juadd({$vo.id})">拒绝</button></span>
+        </div>
+    </foreach>
+    <foreach name="tjg" item="vos">
+        <div class="inf">
+            <span>
+                用户:{$vos.ztj},{$vos.ty}了您的好友申请。
+                <if condition="($vos.ty eq 拒绝)">拒绝理由：{$vos.yz}</if>
+            </span>
+            <span class="yij"><button onclick="infqd({$vos.id})">确定</button></span>
+        </div>
+    </foreach>
+    <div class="totj collapse" align="center">
+        <table>
+            <tr>
+                <td>备注：</td><td><input type="text" maxlength="20" id="bz"></td>
+            </tr>
+            <tr>
+                <td>分组：</td><td><select id="hyfz"><foreach name="fz" item="vo" key="k"><option value="{$k}">{$vo}</option></foreach></select></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><button id="tyadd">添加</button></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+<script src="__PUBLIC__/js/jquery-1.12.3.min.js"></script>
+<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+<script src="__PUBLIC__/js/frd.js"></script>
+<script type="text/javascript">
+    var url="__APP__";
+    var pb="__PUBLIC__";
+</script>
+</html>

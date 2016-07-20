@@ -1,0 +1,55 @@
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>找回密码</title>
+    <link href="__PUBLIC__/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="__PUBLIC__/js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript">
+        var url="__APP__";
+    </script>
+    <script type="text/javascript" src="__PUBLIC__/js/dl.js"></script>
+    <style>
+        .col-center-block {
+            float: none;
+            display: block;
+            margin-top: 10%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="col-xs-12 col-md-4 col-center-block">
+    <form id="frm" action="__APP__/Home/Index/founds" method="post" onsubmit="return fod()">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3>找回密码：</h3>
+            </div>
+            <div class="panel-body">
+                <div id="inf" class="text-danger"></div>
+                <div class="grp">
+                    <div class="input-group">
+                        <label class="input-group-addon lb">邮箱</label>
+                        <input type="text" class="form-control" id="fmail" name="mail">
+                    </div>
+                </div><br>
+                <div class="grp">
+                    <div class="input-group">
+                        <input type="text" id="ym" name="ym" class="form-control" placeholder="验证码">
+                        <span class="input-group-addon"><img  title="点击刷新" src="__APP__/Home/Index/yzm" align="absbottom" onclick="this.src='__APP__/Home/Index/yzm?'+Math.random();"/></span>
+                    </div>
+                </div><br>
+                <div class="grp">
+                    <div class="input-group">
+                        <input type="text" id="yzm" name="yzm" class="form-control">
+                        <span class="input-group-addon"><input type="button" id="hq" class="btn btn-info" value="获取验证码"></span>
+                    </div>
+                </div><br>
+                <input class="btn btn-block btn-success" id="sub" type="submit" value="修改"><br>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

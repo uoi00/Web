@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/css/bootstrap.min.css">
+</head>
+<body>
+    <h3 align="center">相册修改</h3>
+    <form action="__APP__/Home/Photo/updps" method="post" onsubmit="return addcx();">
+        <input type="text" placeholder="相册名称" name="ps" id="ps" value="{$name}"><br>
+        <textarea name="bew" placeholder="相册描述" cols="40" rows="4">{$bew}</textarea><br>
+        <button type="submit" name="sub" value="{$id}">发表</button>
+    </form>
+</body>
+<script src="__PUBLIC__/js/jquery-1.12.3.min.js"></script>
+<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    function addcx() {
+        if ($("#ps").val() == '') {
+            alert('相册名称不能为空');
+            return false;
+        } else {
+            return true;
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,56 @@
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>修改密码</title>
+    <link href="__PUBLIC__/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="__PUBLIC__/js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript">
+        var url="__APP__";
+    </script>
+    <script type="text/javascript" src="__PUBLIC__/js/dl.js"></script>
+    <style>
+        .col-center-block {
+            float: none;
+            display: block;
+            margin-top: 10%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        span{
+            margin-left: 2%;
+            color: darkgray;
+        }
+        .grp{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="col-xs-12 col-md-4 col-center-block">
+    <form action="__APP__/Home/Index/update" method="post" id="frm" onclick="return up()">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3>修  改：</h3>
+            </div>
+            <div class="panel-body">
+                <div id="inf" class="text-danger"></div>
+                <div class="grp">
+                    <div class="input-group">
+                        <label class="input-group-addon">密 &nbsp; &nbsp; &nbsp; &nbsp;码</label>
+                        <input type="password" class="form-control" id="pwd" name="pwd">
+                    </div>
+                </div>
+                <div class="grp">
+                    <div class="input-group">
+                        <label class="input-group-addon">重复密码</label>
+                        <input type="password" class="form-control" id="rpwd" name="rpwd">
+                    </div>
+                </div>
+                <input class="btn btn-block btn-success" type="submit"  id="sub" value="提交">
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

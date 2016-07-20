@@ -1,0 +1,78 @@
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>注册帐号</title>
+    <link href="__PUBLIC__/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="__PUBLIC__/js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript">
+        var url="__APP__";
+    </script>
+    <script type="text/javascript" src="__PUBLIC__/js/dl.js"></script>
+    <style>
+        .col-center-block {
+            float: none;
+            display: block;
+            margin-top: 10%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        span{
+            margin-left: 2%;
+            color: darkgray;
+        }
+        .grp{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="col-xs-12 col-md-4 col-center-block">
+    <form action="__APP__/Home/Index/reg" method="post" id="frm" onsubmit="return zc()">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3>注册：</h3>
+            </div>
+            <div class="panel-body">
+                <div id="inf" class="text-danger"></div>
+                <div class="grp">
+                    <div class="input-group">
+                        <label class="input-group-addon lb">邮箱</label>
+                        <input type="text" class="form-control" id="mail" name="mail">
+                    </div>
+                    <span>请填写邮箱</span>
+                </div>
+                <div class="grp">
+                    <div class="input-group">
+                        <input type="text" id="ym" name="ym" class="form-control" placeholder="验证码">
+                        <span class="input-group-addon"><img  title="点击刷新" src="__APP__/Home/Index/yzm" align="absbottom" onclick="this.src='__APP__/Home/Index/yzm?'+Math.random();"/></span>
+                    </div>
+                </div>
+                <div class="grp">
+                    <div class="input-group">
+                        <input type="text" id="yzm" name="yzm" class="form-control">
+                        <span class="input-group-addon"><input type="button" id="hq" class="btn btn-info" value="获取验证码"></span>
+                    </div>
+                    <span>请填写验证码</span>
+                </div>
+                <div class="grp">
+                    <div class="input-group">
+                        <label class="input-group-addon">密 &nbsp; &nbsp; &nbsp; &nbsp;码</label>
+                        <input type="password" class="form-control" id="pwd" name="pwd">
+                    </div>
+                    <span>请填写密码</span>
+                </div>
+                <div class="grp">
+                    <div class="input-group">
+                        <label class="input-group-addon">重复密码</label>
+                        <input type="password" class="form-control" id="rpwd" name="rpwd">
+                    </div>
+                    <span>请填写重复密码</span>
+                </div>
+                <input class="btn btn-block btn-success" type="submit" id="sub" value="提交">
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
